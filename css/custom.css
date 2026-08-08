@@ -254,6 +254,23 @@ h1 {
   color: var(--color-ink);
 }
 
+/* Modal en modo oscuro */
+body.dark-mode .modal-content {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  border-color: var(--color-border);
+}
+
+body.dark-mode .modal-header,
+body.dark-mode .modal-footer {
+  border-color: var(--color-border);
+}
+
+body.dark-mode .modal-title,
+body.dark-mode .modal-body {
+  color: var(--color-ink);
+}
+
 /* Pie de página */
 .site-footer {
   background: var(--color-tomato-dark);
