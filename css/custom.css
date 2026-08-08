@@ -1,0 +1,279 @@
+/* Variables principales para cambiar colores y fuente en un solo lugar */
+:root {
+  --color-bg: #fff8ee;
+  --color-paper: #fffdf8;
+  --color-tomato: #b83222;
+  --color-tomato-dark: #842417;
+  --color-basil: #2f6f48;
+  --color-ink: #2d211b;
+  --color-muted: #74665d;
+  --color-border: #ead8c1;
+  --font-main: "Nunito", Arial, sans-serif;
+}
+
+/* Estilo base de todo el sitio */
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-main);
+  padding-top: 72px;
+}
+
+/* Cambia algunos colores cuando el usuario activa modo oscuro */
+body.dark-mode {
+  --color-bg: #201715;
+  --color-paper: #2d211d;
+  --color-ink: #fff4e4;
+  --color-muted: #d8c5b2;
+  --color-border: #4a3831;
+}
+
+/* Color propio para la barra de navegación */
+.navbar {
+  background: var(--color-tomato-dark);
+}
+
+.navbar-brand {
+  letter-spacing: .03em;
+}
+
+/* Sección hero de la página inicial */
+.hero-section {
+  padding: 4rem 0 3rem;
+  background:
+    radial-gradient(circle at top left, rgba(255, 209, 128, .55), transparent 30%),
+    linear-gradient(135deg, #fff2db 0%, var(--color-bg) 60%);
+}
+
+/* Versión del hero cuando está activo el modo oscuro */
+.dark-mode .hero-section {
+  background:
+    radial-gradient(circle at top left, rgba(184, 50, 34, .28), transparent 32%),
+    linear-gradient(135deg, #2c1b18 0%, var(--color-bg) 70%);
+}
+
+/* Mantiene las páginas interiores con altura suficiente */
+.page-main {
+  min-height: 72vh;
+}
+
+/* Espaciado reutilizable para secciones */
+.section-pad {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* Fondo cálido para separar una sección de otra */
+.section-warm {
+  background: rgba(255, 229, 186, .55);
+}
+
+.dark-mode .section-warm {
+  background: rgba(132, 36, 23, .16);
+}
+
+/* Texto pequeño superior usado como etiqueta */
+.eyebrow {
+  color: var(--color-basil);
+  font-size: .82rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  margin-bottom: .5rem;
+  text-transform: uppercase;
+}
+
+/* Títulos más marcados para dar identidad */
+h1,
+h2,
+h3 {
+  font-weight: 800;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 8vw, 4.8rem);
+  line-height: .95;
+}
+
+.hero-text,
+.lead {
+  color: var(--color-muted);
+}
+
+/* Botón principal personalizado */
+.btn-brand {
+  background: var(--color-tomato);
+  border-color: var(--color-tomato);
+  color: #fff;
+  font-weight: 700;
+}
+
+/* Estado hover/focus del botón principal */
+.btn-brand:hover,
+.btn-brand:focus {
+  background: var(--color-tomato-dark);
+  border-color: var(--color-tomato-dark);
+  color: #fff;
+}
+
+/* Botón secundario con borde */
+.btn-outline-brand {
+  border-color: var(--color-tomato);
+  color: var(--color-tomato);
+  font-weight: 700;
+}
+
+/* Estado activo o hover del botón secundario */
+.btn-outline-brand:hover,
+.btn-outline-brand:focus,
+.btn-outline-brand.active {
+  background: var(--color-tomato);
+  border-color: var(--color-tomato);
+  color: #fff;
+}
+
+/* Cajas blancas usadas en cards, formulario y detalle */
+.hero-card,
+.info-card,
+.contact-form,
+.contact-note,
+.detail-panel {
+  background: var(--color-paper);
+  border: 1px solid var(--color-border);
+  border-radius: 1.25rem;
+  box-shadow: 0 12px 30px rgba(91, 50, 32, .12);
+}
+
+/* Ajustes visuales del carrusel principal */
+.hero-card {
+  padding: .6rem;
+}
+
+.hero-img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* Tarjetas informativas de la home */
+.info-card {
+  padding: 1.4rem;
+}
+
+.info-card h2 {
+  font-size: 1.25rem;
+}
+
+/* Tarjetas de productos del catálogo */
+.pizza-card {
+  background: var(--color-paper);
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+/* Imágenes de las pizzas con el mismo formato */
+.pizza-card img {
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.pizza-card .card-text {
+  color: var(--color-muted);
+}
+
+/* Precio destacado en verde */
+.price {
+  color: var(--color-basil);
+  font-weight: 800;
+}
+
+/* Contenedor de botones de filtro */
+.filter-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+/* Clase que usa JavaScript para ocultar productos filtrados */
+.pizza-item.is-hidden {
+  display: none;
+}
+
+/* Imagen grande de la página detalle */
+.detail-img {
+  border-radius: 1.25rem;
+  box-shadow: 0 12px 30px rgba(91, 50, 32, .15);
+  max-height: 520px;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Paneles interiores con padding */
+.detail-panel,
+.contact-form,
+.contact-note {
+  padding: 1.25rem;
+}
+
+/* Texto donde se muestra el tamaño elegido */
+.selected-size {
+  color: var(--color-muted);
+}
+
+/* Mensajes de respuesta de JS */
+.feedback-text {
+  color: var(--color-basil);
+  font-weight: 700;
+}
+
+/* Ajustes del accordion para que combine con el diseño */
+.custom-accordion .accordion-button {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-weight: 800;
+}
+
+.custom-accordion .accordion-body,
+.custom-accordion .accordion-item {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+/* Campos de formulario con borde suave */
+.form-control,
+.form-select,
+.input-group-text {
+  background-color: #fffaf2;
+  border-color: var(--color-border);
+}
+
+/* Campos de formulario en modo oscuro */
+.dark-mode .form-control,
+.dark-mode .form-select,
+.dark-mode .input-group-text {
+  background-color: #3a2b25;
+  color: var(--color-ink);
+}
+
+/* Pie de página */
+.site-footer {
+  background: var(--color-tomato-dark);
+  color: #fff7ef;
+  padding: 1.4rem 0;
+}
+
+/* Cambios para pantallas de escritorio */
+@media (min-width: 992px) {
+  .hero-section {
+    padding: 6rem 0 5rem;
+  }
+
+  .hero-text {
+    font-size: 1.2rem;
+    max-width: 34rem;
+  }
+
+  .section-pad {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
+}
