@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Detalle de pizza Napolitana de Don Tomate.">
+    <title>Pizzería Don Tomate | Detalle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+  </head>
+  <body>
+    <!-- Encabezado con navegación entre páginas -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
+        <div class="container">
+          <a class="navbar-brand fw-bold" href="index.html">Don Tomate</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="menuPrincipal">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="listado.html">Listado</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="detalle.html">Detalle</a></li>
+              <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+            </ul>
+            <button class="btn btn-sm btn-outline-light ms-lg-3 theme-button" type="button" data-theme-toggle>Modo noche</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-main">
+      <!-- Detalle del producto seleccionado -->
+      <section class="container section-pad">
+        <div class="row g-4 align-items-start">
+          <div class="col-lg-6">
+            <img class="detail-img" src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=900&q=80" alt="Pizza Napolitana con tomate y albahaca">
+          </div>
+          <article class="col-lg-6">
+            <p class="eyebrow">detalle del producto</p>
+            <h1>Napolitana de la casa</h1>
+            <p class="lead">Una pizza simple, con tomate, mozzarella, rodajas de tomate fresco y albahaca. Buena para compartir sin pelear por los ingredientes.</p>
+
+            <div class="detail-panel">
+              <h2 class="h5">Elige tamaño</h2>
+              <div class="btn-group size-group" role="group" aria-label="Elegir tamaño de pizza">
+                <button class="btn btn-outline-brand active" type="button" data-size-price="8900" data-size-name="Individual">Individual</button>
+                <button class="btn btn-outline-brand" type="button" data-size-price="11900" data-size-name="Mediana">Mediana</button>
+                <button class="btn btn-outline-brand" type="button" data-size-price="14900" data-size-name="Familiar">Familiar</button>
+              </div>
+              <p class="selected-size mt-3 mb-1">Tamaño elegido: <span id="tamanoElegido">Individual</span></p>
+              <p class="price fs-4 mb-0" id="precioPizza">$8.900</p>
+            </div>
+
+            <div class="d-flex flex-column flex-sm-row gap-2 mt-4">
+              <button class="btn btn-brand" type="button" data-bs-toggle="modal" data-bs-target="#modalPedido">Agregar al pedido</button>
+              <button class="btn btn-outline-brand" type="button" id="botonFavorito">Guardar como favorita</button>
+            </div>
+            <p id="mensajeFavorito" class="feedback-text mt-3" aria-live="polite"></p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Información adicional en accordion de Bootstrap -->
+      <section class="container pb-5">
+        <div class="accordion custom-accordion" id="accordionPizza">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#ingredientes" aria-expanded="true" aria-controls="ingredientes">
+                Ingredientes
+              </button>
+            </h2>
+            <div id="ingredientes" class="accordion-collapse collapse show" data-bs-parent="#accordionPizza">
+              <div class="accordion-body">Masa artesanal, salsa de tomate, mozzarella, tomate fresco, albahaca y orégano.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#alergenos" aria-expanded="false" aria-controls="alergenos">
+                Alérgenos
+              </button>
+            </h2>
+            <div id="alergenos" class="accordion-collapse collapse" data-bs-parent="#accordionPizza">
+              <div class="accordion-body">Contiene gluten y lácteos. Puede tener trazas de frutos secos por preparación compartida.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modal de Bootstrap que simula agregar la pizza al pedido -->
+      <div class="modal fade" id="modalPedido" tabindex="-1" aria-labelledby="modalPedidoTitulo" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title fs-5" id="modalPedidoTitulo">Pedido agregado</h2>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+              Agregamos la Napolitana de la casa a tu pedido. Para esta evaluación el pedido es solo demostrativo.
+            </div>
+            <div class="modal-footer">
+              <a href="contacto.html" class="btn btn-brand">Ir a contacto</a>
+              <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Seguir mirando</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="site-footer">
+      <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+        <p class="mb-0">Pizzería Don Tomate · Proyecto académico</p>
+        <p class="mb-0">Detalle con interacción propia en JS</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
