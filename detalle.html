@@ -38,19 +38,19 @@
       <section class="container section-pad">
         <div class="row g-4 align-items-start">
           <div class="col-lg-6">
-            <img class="detail-img" src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=900&q=80" alt="Pizza Napolitana con tomate y albahaca">
+            <img id="detalleImagen" class="detail-img" src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=900&q=80" alt="Pizza Napolitana con tomate y albahaca">
           </div>
           <article class="col-lg-6">
             <p class="eyebrow">detalle del producto</p>
-            <h1>Napolitana de la casa</h1>
-            <p class="lead">Una pizza simple, con tomate, mozzarella, rodajas de tomate fresco y albahaca. Buena para compartir sin pelear por los ingredientes.</p>
+            <h1 id="detalleTitulo">Napolitana de la casa</h1>
+            <p class="lead" id="detalleDescripcion">Una pizza simple, con tomate, mozzarella, rodajas de tomate fresco y albahaca. Buena para compartir sin pelear por los ingredientes.</p>
 
             <div class="detail-panel">
               <h2 class="h5">Elige tamaño</h2>
               <div class="btn-group size-group" role="group" aria-label="Elegir tamaño de pizza">
-                <button class="btn btn-outline-brand active" type="button" data-size-price="8900" data-size-name="Individual">Individual</button>
-                <button class="btn btn-outline-brand" type="button" data-size-price="11900" data-size-name="Mediana">Mediana</button>
-                <button class="btn btn-outline-brand" type="button" data-size-price="14900" data-size-name="Familiar">Familiar</button>
+                <button class="btn btn-outline-brand active" type="button" data-size-key="individual" data-size-price="8900" data-size-name="Individual">Individual</button>
+                <button class="btn btn-outline-brand" type="button" data-size-key="mediana" data-size-price="11900" data-size-name="Mediana">Mediana</button>
+                <button class="btn btn-outline-brand" type="button" data-size-key="familiar" data-size-price="14900" data-size-name="Familiar">Familiar</button>
               </div>
               <p class="selected-size mt-3 mb-1">Tamaño elegido: <span id="tamanoElegido">Individual</span></p>
               <p class="price fs-4 mb-0" id="precioPizza">$8.900</p>
@@ -75,7 +75,7 @@
               </button>
             </h2>
             <div id="ingredientes" class="accordion-collapse collapse show" data-bs-parent="#accordionPizza">
-              <div class="accordion-body">Masa artesanal, salsa de tomate, mozzarella, tomate fresco, albahaca y orégano.</div>
+              <div class="accordion-body" id="detalleIngredientes">Masa artesanal, salsa de tomate, mozzarella, tomate fresco, albahaca y orégano.</div>
             </div>
           </div>
           <div class="accordion-item">
@@ -100,7 +100,7 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
             </div>
             <div class="modal-body">
-              Agregamos la Napolitana de la casa a tu pedido. Para esta evaluación el pedido es solo demostrativo.
+              <span id="detalleModal">Agregamos la Napolitana de la casa a tu pedido.</span> Para esta evaluación el pedido es solo demostrativo.
             </div>
             <div class="modal-footer">
               <a href="contacto.html" class="btn btn-brand">Ir a contacto</a>
