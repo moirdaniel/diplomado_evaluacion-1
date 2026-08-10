@@ -254,6 +254,28 @@ h1 {
   color: var(--color-ink);
 }
 
+/* Modal en modo oscuro */
+body.dark-mode .modal-content {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  border-color: var(--color-border);
+}
+
+body.dark-mode .modal-header,
+body.dark-mode .modal-footer {
+  border-color: var(--color-border);
+}
+
+body.dark-mode .modal-title,
+body.dark-mode .modal-body {
+  color: var(--color-ink);
+}
+
+/* Botón X del modal */
+body.dark-mode .modal-header .btn-close {
+  filter: invert(1);
+}
+
 /* Pie de página */
 .site-footer {
   background: var(--color-tomato-dark);
@@ -275,5 +297,29 @@ h1 {
   .section-pad {
     padding-top: 4.5rem;
     padding-bottom: 4.5rem;
+  }
+}
+
+/* Mejoras visuales del menú móvil */
+@media (max-width: 991.98px) {
+  .navbar-nav .nav-link {
+    padding: .6rem .75rem;
+    border-radius: .5rem;
+    transition: background-color .2s ease, color .2s ease;
+  }
+
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link:focus {
+    background-color: rgba(255, 255, 255, .12);
+    color: #fff;
+  }
+
+  .navbar-nav .nav-link.active {
+    background-color: rgba(255, 255, 255, .16);
+    color: #fff;
+  }
+
+  .navbar-nav {
+    gap: .2rem;
   }
 }
