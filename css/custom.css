@@ -12,11 +12,23 @@
 }
 
 /* Estilo base de todo el sitio */
+html {
+  min-height: 100%;
+}
+
 body {
   background: var(--color-bg);
   color: var(--color-ink);
+  display: flex;
+  flex-direction: column;
   font-family: var(--font-main);
+  min-height: 100vh;
   padding-top: 72px;
+}
+
+/* Hace que el contenido ocupe el espacio disponible y empuje el footer hacia abajo */
+body > main {
+  flex: 1 0 auto;
 }
 
 /* Cambia algunos colores cuando el usuario activa modo oscuro */
@@ -258,6 +270,7 @@ h1 {
 .site-footer {
   background: var(--color-tomato-dark);
   color: #fff7ef;
+  flex-shrink: 0;
   padding: 1.4rem 0;
 }
 
