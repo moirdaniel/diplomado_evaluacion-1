@@ -266,6 +266,16 @@ h1 {
   color: var(--color-ink);
 }
 
+/* Alineación del contenido de las cards */
+.pizza-card .card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.pizza-card .btn {
+  margin-top: auto;
+}
+
 /* Modal en modo oscuro */
 body.dark-mode .modal-content {
   background-color: var(--color-paper);
@@ -286,6 +296,11 @@ body.dark-mode .modal-body {
 /* Botón X del modal */
 body.dark-mode .modal-header .btn-close {
   filter: invert(1);
+}
+
+/* Textos de las cards en modo oscuro */
+body.dark-mode .pizza-card .card-title {
+  color: var(--color-ink);
 }
 
 /* Pie de página */

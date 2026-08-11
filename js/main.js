@@ -11,7 +11,7 @@ const pizzasDetalle = {
       mediana: 11900,
       familiar: 14900
     },
-    imagen: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=900&q=80",
+    imagen: "img/margarita con albahaca.jpg",
     alt: "Pizza Margarita con albahaca"
   },
   pepperoni: {
@@ -23,7 +23,7 @@ const pizzasDetalle = {
       mediana: 12500,
       familiar: 15500
     },
-    imagen: "https://images.unsplash.com/photo-1620374645498-af6bd681a0bd?auto=format&fit=crop&w=900&q=80",
+    imagen: "img/Pepperoni tranquila.jpg",
     alt: "Pizza de pepperoni"
   },
   huerta: {
@@ -35,7 +35,7 @@ const pizzasDetalle = {
       mediana: 12200,
       familiar: 15200
     },
-    imagen: "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=900&q=80",
+    imagen: "img/la huerta.jpg",
     alt: "Pizza vegetariana con verduras"
   },
   bbq: {
@@ -47,7 +47,7 @@ const pizzasDetalle = {
       mediana: 13300,
       familiar: 16300
     },
-    imagen: "https://images.unsplash.com/photo-1601924582975-4ec860a09e74?auto=format&fit=crop&w=900&q=80",
+    imagen: "img/Chanchita BBQ.jpg",
     alt: "Pizza con carne y queso"
   },
   quesos: {
@@ -59,7 +59,7 @@ const pizzasDetalle = {
       mediana: 12900,
       familiar: 15900
     },
-    imagen: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=80",
+    imagen: "img/Tres quesos.jpg",
     alt: "Pizza de quesos"
   },
   salame: {
@@ -71,7 +71,7 @@ const pizzasDetalle = {
       mediana: 13100,
       familiar: 16100
     },
-    imagen: "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?auto=format&fit=crop&w=900&q=80",
+    imagen: "img/Salame picantita.jpg",
     alt: "Pizza picante con salame"
   }
 };
