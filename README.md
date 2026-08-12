@@ -16,8 +16,29 @@ La idea visual es sencilla y cercana, con colores cálidos, tarjetas de producto
 
 ## Demo
 
-- Sitio desplegado: pendiente
-- Capturas: pendiente
+- Sitio desplegado: https://moirdaniel.github.io/diplomado_evaluacion-1/
+
+### Capturas
+
+- Home
+
+![Home](docs/home.png)
+
+- Home - modo oscuro
+
+![Home modo oscuro](docs/home-dark.png)
+
+- Listado
+
+![Listado](docs/listado.png)
+
+- Detalle
+
+![Detalle](docs/detalle.png)
+
+- Contacto
+
+![Contacto](docs/contacto.png)
 
 ## Cómo correr localmente
 
@@ -47,11 +68,18 @@ http://localhost:8000
 ├── listado.html
 ├── detalle.html
 ├── contacto.html
+├── README.md
 ├── css/
 │   └── custom.css
 ├── js/
 │   └── main.js
-└── img/
+├── img/
+└── docs/
+    ├── home.png
+    ├── home-dark.png
+    ├── listado.png
+    ├── detalle.png
+    └── contacto.png
 ```
 
 ## Stack
