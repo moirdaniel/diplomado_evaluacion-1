@@ -61,75 +61,8 @@
 
         <p id="resultadoFiltro" class="small text-muted">Mostrando 6 pizzas.</p>
 
-        <!-- Listado de productos armado con cards de Bootstrap -->
-        <div class="row g-4" id="catalogoPizzas">
-          <article class="col-md-6 col-lg-4 pizza-item" data-category="clasica" data-name="margarita queso albahaca tomate">
-            <div class="card pizza-card h-100">
-              <img src="img/Margarita con albahaca.jpg" alt="Pizza Margarita con albahaca">
-              <div class="card-body">
-                <h2 class="h5 card-title">Margarita buena</h2>
-                <p class="card-text">Mozzarella, tomate y albahaca fresca.</p>
-                <p class="price">Desde $8.900</p>
-                <a class="btn btn-outline-brand w-100" href="detalle.html?pizza=margarita">Ver detalle</a>
-              </div>
-            </div>
-          </article>
-          <article class="col-md-6 col-lg-4 pizza-item" data-category="clasica" data-name="pepperoni queso tomate">
-            <div class="card pizza-card h-100">
-              <img src="img/Pepperoni tranquila.jpg" class="card-img-top" alt="Pizza de pepperoni">
-              <div class="card-body">
-                <h2 class="h5 card-title">Pepperoni tranquila</h2>
-                <p class="card-text">Pepperoni, queso y salsa de la casa.</p>
-                <p class="price">Desde $9.500</p>
-                <a class="btn btn-outline-brand w-100" href="detalle.html?pizza=pepperoni">Ver detalle</a>
-              </div>
-            </div>
-          </article>
-          <article class="col-md-6 col-lg-4 pizza-item" data-category="vegetariana" data-name="huerta champiñon pimenton cebolla">
-            <div class="card pizza-card h-100">
-              <img src="img/La Huerta.jpg" class="card-img-top" alt="Pizza vegetariana con verduras">
-              <div class="card-body">
-                <h2 class="h5 card-title">La Huerta</h2>
-                <p class="card-text">Champiñón, pimentón, cebolla morada y aceitunas.</p>
-                <p class="price">Desde $9.200</p>
-                <a class="btn btn-outline-brand w-100" href="detalle.html?pizza=huerta">Ver detalle</a>
-              </div>
-            </div>
-          </article>
-          <article class="col-md-6 col-lg-4 pizza-item" data-category="especial" data-name="chanchita tocino cebolla bbq">
-            <div class="card pizza-card h-100">
-              <img src="img/Chanchita BBQ.jpg" class="card-img-top" alt="Pizza con carne y queso">
-              <div class="card-body">
-                <h2 class="h5 card-title">Chanchita BBQ</h2>
-                <p class="card-text">Tocino, cebolla caramelizada y toque de barbecue.</p>
-                <p class="price">Desde $10.300</p>
-                <a class="btn btn-outline-brand w-100" href="detalle.html?pizza=bbq">Ver detalle</a>
-              </div>
-            </div>
-          </article>
-          <article class="col-md-6 col-lg-4 pizza-item" data-category="vegetariana" data-name="quesos mozzarella azul parmesano">
-            <div class="card pizza-card h-100">
-              <img src="img/Tres quesos.jpg" class="card-img-top" alt="Pizza de quesos">
-              <div class="card-body">
-                <h2 class="h5 card-title">Tres quesos</h2>
-                <p class="card-text">Mozzarella, parmesano y un poco de queso azul.</p>
-                <p class="price">Desde $9.900</p>
-                <a class="btn btn-outline-brand w-100" href="detalle.html?pizza=quesos">Ver detalle</a>
-              </div>
-            </div>
-          </article>
-          <article class="col-md-6 col-lg-4 pizza-item" data-category="especial" data-name="picante salame aji tomate">
-            <div class="card pizza-card h-100">
-              <img src="img/Salame picantita.jpg" class="card-img-top" alt="Pizza picante con salame">
-              <div class="card-body">
-                <h2 class="h5 card-title">Salame picantita</h2>
-                <p class="card-text">Salame, ají suave y extra salsa de tomate.</p>
-                <p class="price">Desde $10.100</p>
-                <a class="btn btn-outline-brand w-100" href="detalle.html?pizza=salame">Ver detalle</a>
-              </div>
-            </div>
-          </article>
-        </div>
+        <!-- JavaScript arma este listado desde los datos dummy de main.js -->
+        <div class="row g-4" id="catalogoPizzas"></div>
       </section>
     </main>
 
@@ -137,7 +70,6 @@
     <footer class="site-footer">
       <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
         <p class="mb-0">Pizzería Don Tomate · Proyecto académico</p>
-        <p class="mb-0">Catálogo estático listo para crecer con fetch</p>
       </div>
     </footer>
 

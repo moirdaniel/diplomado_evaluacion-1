@@ -6,72 +6,84 @@ const pizzasDetalle = {
     nombre: "Margarita buena",
     descripcion: "Mozzarella, tomate y albahaca fresca. Es una opción simple y liviana.",
     ingredientes: "Masa artesanal, salsa de tomate, mozzarella y albahaca fresca.",
+    categoria: "clasica",
+    busqueda: "margarita queso albahaca tomate",
     precios: {
       individual: 8900,
       mediana: 11900,
       familiar: 14900
     },
-    imagen: "img/margarita con albahaca.jpg",
+    imagen: "img/margarita_con_albahaca.jpg",
     alt: "Pizza Margarita con albahaca"
   },
   pepperoni: {
     nombre: "Pepperoni tranquila",
     descripcion: "Pepperoni, queso y salsa de la casa. Tiene sabor marcado, pero no es pesada.",
     ingredientes: "Masa artesanal, salsa de tomate, mozzarella y pepperoni.",
+    categoria: "clasica",
+    busqueda: "pepperoni queso tomate",
     precios: {
       individual: 9500,
       mediana: 12500,
       familiar: 15500
     },
-    imagen: "img/Pepperoni tranquila.jpg",
+    imagen: "img/pepperoni_tranquila.jpg",
     alt: "Pizza de pepperoni"
   },
   huerta: {
     nombre: "La Huerta",
     descripcion: "Champiñón, pimentón, cebolla morada y aceitunas. Buena opción vegetariana.",
     ingredientes: "Masa artesanal, salsa de tomate, mozzarella, champiñón, pimentón, cebolla y aceitunas.",
+    categoria: "vegetariana",
+    busqueda: "huerta champiñon pimenton cebolla",
     precios: {
       individual: 9200,
       mediana: 12200,
       familiar: 15200
     },
-    imagen: "img/la huerta.jpg",
+    imagen: "img/la_huerta.jpg",
     alt: "Pizza vegetariana con verduras"
   },
   bbq: {
     nombre: "Chanchita BBQ",
     descripcion: "Tocino, cebolla caramelizada y toque de barbecue. Es la más contundente.",
     ingredientes: "Masa artesanal, salsa de tomate, mozzarella, tocino, cebolla caramelizada y barbecue.",
+    categoria: "especial",
+    busqueda: "chanchita tocino cebolla bbq",
     precios: {
       individual: 10300,
       mediana: 13300,
       familiar: 16300
     },
-    imagen: "img/Chanchita BBQ.jpg",
+    imagen: "img/chanchita_bbq.jpg",
     alt: "Pizza con carne y queso"
   },
   quesos: {
     nombre: "Tres quesos",
     descripcion: "Mozzarella, parmesano y un poco de queso azul. Cremosa y bien sabrosa.",
     ingredientes: "Masa artesanal, salsa de tomate, mozzarella, parmesano y queso azul.",
+    categoria: "vegetariana",
+    busqueda: "quesos mozzarella azul parmesano",
     precios: {
       individual: 9900,
       mediana: 12900,
       familiar: 15900
     },
-    imagen: "img/Tres quesos.jpg",
+    imagen: "img/tres_quesos.jpg",
     alt: "Pizza de quesos"
   },
   salame: {
     nombre: "Salame picantita",
     descripcion: "Salame, ají suave y extra salsa de tomate. Tiene un picor moderado.",
     ingredientes: "Masa artesanal, salsa de tomate, mozzarella, salame y ají suave.",
+    categoria: "especial",
+    busqueda: "picante salame aji tomate",
     precios: {
       individual: 10100,
       mediana: 13100,
       familiar: 16100
     },
-    imagen: "img/Salame picantita.jpg",
+    imagen: "img/salame_picantita.jpg",
     alt: "Pizza picante con salame"
   }
 };
@@ -118,11 +130,45 @@ botonesTema.forEach((boton) => {
 // --------------------
 // Buscador del listado
 // --------------------
+const catalogoPizzas = document.querySelector("#catalogoPizzas");
 const inputBusqueda = document.querySelector("#busquedaPizza");
 const botonesFiltro = document.querySelectorAll("[data-filter]");
-const itemsPizza = document.querySelectorAll(".pizza-item");
+let itemsPizza = document.querySelectorAll(".pizza-item");
 const resultadoFiltro = document.querySelector("#resultadoFiltro");
 let categoriaActual = "todas";
+
+// Arma las cards del listado desde los datos dummy.
+function cargarListadoPizzas() {
+  if (!catalogoPizzas) {
+    return;
+  }
+
+  catalogoPizzas.innerHTML = "";
+
+  Object.entries(pizzasDetalle).forEach(([clave, pizza]) => {
+    const articulo = document.createElement("article");
+    articulo.className = "col-md-6 col-lg-4 pizza-item";
+    articulo.dataset.category = pizza.categoria;
+    articulo.dataset.name = pizza.busqueda;
+
+    articulo.innerHTML = `
+      <div class="card pizza-card h-100">
+        <img src="${pizza.imagen}" class="card-img-top" alt="${pizza.alt}">
+        <div class="card-body">
+          <h2 class="h5 card-title">${pizza.nombre}</h2>
+          <p class="card-text">${pizza.descripcion}</p>
+          <p class="price">Desde ${formatoPesos.format(pizza.precios.individual)}</p>
+          <a class="btn btn-outline-brand w-100" href="detalle.html?pizza=${clave}">Ver detalle</a>
+        </div>
+      </div>
+    `;
+
+    catalogoPizzas.appendChild(articulo);
+  });
+
+  itemsPizza = document.querySelectorAll(".pizza-item");
+  aplicarFiltros();
+}
 
 // Marca visualmente qué botón de filtro está seleccionado.
 function actualizarBotonFiltro(botonActivo) {
@@ -168,6 +214,8 @@ botonesFiltro.forEach((boton) => {
     aplicarFiltros();
   });
 });
+
+cargarListadoPizzas();
 
 // --------------------
 // Detalle de la pizza
