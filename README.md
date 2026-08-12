@@ -82,7 +82,7 @@ http://localhost:8000
 │   └── tres_quesos.jpg
 └── docs/
     ├── home.png
-    ├── home-dark.png
+    ├── dark-home.png
     ├── listado.png
     ├── detalle.png
     └── contacto.png
