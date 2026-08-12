@@ -74,6 +74,12 @@ http://localhost:8000
 ├── js/
 │   └── main.js
 ├── img/
+│   ├── chanchita_bbq.jpg
+│   ├── la_huerta.jpg
+│   ├── margarita_con_albahaca.jpg
+│   ├── pepperoni_tranquila.jpg
+│   ├── salame_picantita.jpg
+│   └── tres_quesos.jpg
 └── docs/
     ├── home.png
     ├── home-dark.png
