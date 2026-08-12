@@ -26,7 +26,7 @@ La idea visual es sencilla y cercana, con colores cálidos, tarjetas de producto
 
 - Home - modo oscuro
 
-![Home modo oscuro](docs/home-dark.png)
+![Home modo oscuro](docs/dark-home.png)
 
 - Listado
 
